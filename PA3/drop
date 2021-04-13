@@ -1,0 +1,22 @@
+#!/usr/bin/tcsh
+if ( $?1 ) then
+    echo "You must supply an object."
+else if ( -e ~/_/i/i/$1 ) then
+    mv ~/_/i/i/$1 ./
+    if ( $1 == weight || -e button ) then
+        echo "A passageway opens."
+        ln -s . d
+        ln -s . e
+        ln -s . ne
+        ln -s . se
+        ln -s . sw
+        ln -s . w
+        mv .nw nw
+        mv u .u
+    endif
+    echo "Done"
+#else if (  ) then
+    #echo "I don't know what that is."
+else 
+    echo "You don't have that."
+endif
